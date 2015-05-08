@@ -114,6 +114,11 @@ Also note Date uses the constructor Date() with new in front of it i.e., "new Da
 Class variables are also called fields. If you see "field" in Java documentation, it is referring to class variables. 
 
 
+// EXPLORING SYNTAX AND FLOW
+
+When writing conditional code, you can compare primitive data types with mathematical operators such as 
+>, <, ==. However, with complex data types such as Strings, you will need to use methods of the class 
+for comparison. 
 
 	
 
