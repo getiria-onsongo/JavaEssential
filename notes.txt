@@ -1,0 +1,123 @@
+SOME OF JAVA USES
+- Web applications using servlets and JSP
+- Native mobile apps for Android and Blackberry
+
+WHAT IS JAVA?
+
+- Started in 1991 as "The Greeb Project". The goal was to create language that could be used to write portable code
+that didn't need to be re-compiled from one system to another.
+- Original language name: Oak
+- Before it was released it was name Java. Presumably because of the amount of coffee the developers were drinking. 
+- Released in 1995
+- Java SE Development kit includes: 
+	- runtime
+	- compiler
+	- javac (a command line compiler)
+	- java (a command line runtime)
+	- jar - (the packager)
+	- javadoc - the documentation builder
+
+- In java, name of the class must match name of the file. So a class named "HelloWorld" should be written in a file
+name "HelloWorld.java". And note, java is case-sensitive
+
+- The folder structure has to match your package structure. If your HellowWorld.java is declared in a package is named 
+	com.lynda.javatraining
+the file should be saved in 
+    com/lynda/javatraining/HelloWorld.java
+
+THE PRINCIPLES OF JAVA
+1. Simple, object-oriented, and familiar
+2. Robust and secure
+3. Architecture-neutral and portable
+4. High-performance(not so initially but now is as fast if not faster than C++)
+5. Interpreted, threaded, and dynamic
+
+- Java compiles to bytecode instead of machine language (like C++) and that's what makes the compiled application portable between platforms
+without recompiling
+  
+- A few other comparisons to C++
+	- C++ allows direct calls to native system libraries while Java calls to native functions go through Java Native Interface (JNI)
+	- C++ exposes low-level system functions while Java runs in protected JVM
+	- C++ requires explicit memory management and pointres while Java manages.
+	- C++ multiple inheritance is possible but Java is limited to single inheritance
+
+- In Java, every application is build inside a class. Everything is an object and an object is created from a class. So you have to define 
+a class for every application. This is unlike programming environments such as Perl where an application can be as litte as a single line 
+of code. 
+
+- A convention in Java is to have the first character of a class name be uppercase. 
+
+- To expand a view, double click on its name. To get back to original layout, double click the name of the view again. 
+
+// -------------------------------------------------------------------------- COMPILE ON THE COMMAND LINE
+
+# Compile and put the class file in bin
+javac src/HelloWorld.java -d bin 
+or 
+javac src/HelloWorld.java -d bin -verbose
+
+# Run the file
+java -cp bin/ HelloWorld
+
+Java does garbage collection on its own and even though there are methods you can run to initiate garbage 
+collection, there is no guarantee JVM will run the garbage collector. 
+
+Any easy approach to avoid a huge memory foot print is to avoid creating unnecessary objects since Java 
+create a memory space in the heap for each object. 
+
+ 
+// -------------------------------------------------------------------------- DECLARING AND INITIALIZING VARIABLES
+
+There are two major types of variables in Java
+- Primitives: 
+	Usually placed in memory and can be accessed very fast. Include: 
+	a) Numerics - integers and floating point numbers
+	b) Single characters
+	c) Boolean (true/false) 
+
+- Complex objects: 
+	a) Strings
+	b) Dates
+	c) Everything else
+
+Declaring a primitive variable is done in 3 parts. 
+
+1) Data type - required
+2) Variable name - required
+3) Initial value - optional 
+
+Example: 
+	int newVariable;
+	or
+	int newVariable = 10; 
+
+Declaring a complex variable is also done in 3 parts. 
+- Complex variables, however, are instances of classes. 
+- Initializaton for complex objects uses new keyword and class constructor 
+
+1) Data type - required
+2) Variable name - required
+3) Initial value - optional 
+
+Example: 
+	Date newDate;
+	or 
+	Date newDate = new Date();
+	
+
+Note the difference between: 
+	int newVariable;
+	Date newDate = new Date();
+Primitive data types start with lower case e.g., int while complex data types start with upper case e.g., Data. 
+Also note Date uses the constructor Date() with new in front of it i.e., "new Date()"
+
+Class variables are also called fields. If you see "field" in Java documentation, it is referring to class variables. 
+
+
+
+	
+
+
+
+
+
