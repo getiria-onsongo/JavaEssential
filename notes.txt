@@ -120,9 +120,38 @@ When writing conditional code, you can compare primitive data types with mathema
 >, <, ==. However, with complex data types such as Strings, you will need to use methods of the class 
 for comparison. 
 
-	
 
+If you are using switch/case statements, you have to put a break after every case statement otherwise all
+the case statements after the matching condition will execute
 
+An Enum is short for Enumeration, it's a way of providing a set of possible values, in older version of the Java,
+previous to version 5.0, you had to create your own enumerations using a particular code model, but now they're
+native to language and have been for the last couple of versions.
 
+Example of an Enum
 
+-----------
+
+public enum Month{
+       JANUARY,FEBRUARY,MARCH;
+}
+Month month = Month.FEBRUARY
+
+switch(month){
+       case JANUARY:
+               System.out.println("First month");
+               break;
+       case FEBRUARY:
+               System.out.println("Second month");
+               break;
+       default:
+               System.out.println("Not 1st or 2nd month");
+               break;
+}
+-----------
+
+The advantage of using an enumeration is that you can explicitly say these are the only possible values, when
+you say something as an integer, you're not limiting yourself to 1 through 12, you have literally millions of
+possibilities. The advantage of the Enum is that you're limiting the possibilities, and making it very clear what's
+possible in this situation.
 
